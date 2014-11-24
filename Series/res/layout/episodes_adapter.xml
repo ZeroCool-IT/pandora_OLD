@@ -1,0 +1,69 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TableRow
+        android:id="@+id/rowSeason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvSeasonTickerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/adapter_search_series_paddings"
+                android:paddingTop="@dimen/adapter_search_series_paddings"
+                android:text="@string/tvSeason"
+                android:textAppearance="@style/DetailsContent" />
+
+            <TextView
+                android:id="@+id/tvSeasonTicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/adapter_search_series_paddings"
+                android:paddingRight="@dimen/adapter_search_series_paddings"
+                android:text="@string/season_placeholder"
+                android:textAppearance="@style/DetailsContent"
+                android:textColor="@color/base_green" />
+
+            <TextView
+                android:id="@+id/tvEpisodeTickerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/adapter_search_series_paddings"
+                android:text="@string/tvEpisodeTickerTitle"
+                android:textAppearance="@style/DetailsContent" />
+
+            <TextView
+                android:id="@+id/tvEpisodeTicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/adapter_search_series_paddings"
+                android:paddingRight="@dimen/adapter_search_series_paddings"
+                android:text="@string/episode_ticker_placeholder"
+                android:textAppearance="@style/DetailsContent"
+                android:textColor="@color/base_green" />
+        </LinearLayout>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/rowEpisodeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tvEpisodeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/adapter_search_series_paddings"
+            android:paddingLeft="@dimen/adapter_search_series_paddings"
+            android:text="@string/episode_title_placeholder"
+            android:textAppearance="@style/AdapterTextMain" />
+    </TableRow>
+
+</TableLayout>

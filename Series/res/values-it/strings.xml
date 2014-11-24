@@ -1,0 +1,132 @@
+<resources>
+
+    <string name="app_name">TV Series</string>
+    <string name="hello_world">Work in progress! Here will be favorites! We are working for you&#8230;</string>
+    <string name="action_settings">Preferenze</string>
+    <string name="search_title">Cerca</string>
+    <string name="search_hint">Cerca Serie TV</string>
+    <string name="title_activity_searchable">Risultati della ricerca:</string>
+    <string name="dialog_message_no_connection">Non sei connesso a internet! Controlla le tue impostazioni e prova ancora!</string>
+    <string name="dialog_title_warning">Attenzione!</string>
+    <string name="dialog_button_OK">OK</string>
+    <string name="dialog_title_error">Errore!</string>
+    <string name="dialog_message_server_error">Uh oh! Sembra che il server non sia raggiungibile al momento, riprova più tardi!</string>
+    <string name="dialog_message_no_data">Uh oh! Sembra ci siano problemi col server! Riprova più tardi!</string>
+    <string name="dialog_message_refresh_error">La serie deve essere ricaricata prima di poter essere aggiunta ai preferiti!</string>
+    <string name="dialog_message_illegal_arguments">Non è possibile fare questa ricerca! Inserisci valori validi e riprova!</string>
+    <string name="dialog_title_no_results">Nessun risultato!</string>
+    <string name="searching">Ricerca&#8230;</string>
+    <string name="retrieving">Recupero dettagli&#8230;</string>
+    <string name="title_activity_details">Dettagli</string>
+    <string name="not_available">N/A</string>
+    <string name="overview">Panoramica</string>
+    <string name="first_aired">Prima messa in onda:</string>
+    <string name="genre">Genere:</string>
+    <string name="user_rating">Valutazione:</string>
+    <string name="MPAA">Contenuto:</string>
+    <string name="network">Network:</string>
+    <string name="status_title">Stato:</string>
+    <string name="network_title">Network:</string>
+    <string name="runtime_title">Durata:</string>
+    <string name="imdb">Vedi su IMDb</string>
+    <string name="link">Link:</string>
+    <string name="select_language">Seleziona lingua</string>
+    <string name="no_connection_error">Impossibile recuperare informazioni ora, riprova più tardi!</string>
+    <string name="no_info_warning">Spiacente, nessuna informazioni disponibile!</string>
+    <string name="specials">Speciali</string>
+    <string name="production_code">Codice produzione:</string>
+    <string name="writers">Scritto da:</string>
+    <string name="director">Regia:</string>
+    <string name="guest_stars">Guest Stars:</string>
+    <string name="no_link_warning">Spiacente, link a IMDb non disponibile!</string>
+    <string name="role_title">Nel ruolo di:</string>
+    <string name="tvEpisodeTickerTitle">Episodio:</string>
+    <string name="tvSeason">Stagione:</string>
+    <string name="save">Salva</string>
+    <string name="search_language">Lingua di ricerca</string>
+    <string name="title_activity_preferences">Preferenze</string>
+    <string name="share">Condividi</string>
+    <string name="share_series_message">Penso che ti potrebbe piacere questa serie TV:</string>
+    <string name="share_episode_message1">Penso che ti potrebbe piacere questo episodio di</string>
+    <string name="share_episode_message2">Stagione</string>
+    <string name="share_episode_message3">Episodio</string>
+    <string name="favorites">Le tue serie TV preferite:</string>
+    <string name="clear_favorites">Cancella preferiti</string>
+    <string name="erase_menu_message">I tuoi preferiti verrano cancellati!</string>
+    <string name="erase_menu_title">Sei sicuro?</string>
+    <string name="erase_menu_positive">Sono sicuro!</string>
+    <string name="erase_menu_negative">Non farlo!</string>
+    <string name="tback">Premi ancora indietro per uscire!</string>
+    <string name="fave_add">Aggiunta ai preferiti!</string>
+    <string name="fave_removed">Rimossa dai preferiti!</string>
+    <string name="season">Stagione</string>
+    <string name="tv_y">Questo programma è progettato per essere adatto a tutti i bambini</string>
+    <string name="tv_y7">Questo programma è progettato per i bambini di 7 anni di età o superiori</string>
+    <string name="tv_g">La maggior parte dei genitori riterrebbe questo programma adatto a tutte le età</string>
+    <string name="tv_pg">Questo programma contiene materiale che i genitori potrebbero trovare inadatto per i bambini più piccoli</string>
+    <string name="tv_14">Questo programma contiene materiale che molti genitori troverebbero inadatto per bambini al di sotto i 14 anni di età</string>
+    <string name="tv_ma">Questo programma è specificamente progettato per gli adulti e quindi potrebbe non essere adatto per i bambini sotto 17 anni di età</string>
+    <string name="parental_guidelines_title">Linee guida per i genitori</string>
+    <string name="about">Tv Series\nAndroid Application\n\ndeveloped by\nThe Lonely Dev\n\nCorso Mobile Programming\n\nLaurea in Ingegneria Informatica\n\nUniversità di Roma\n\"Tor Vergata\"\n\nLuglio 2014</string>
+    <string name="about_title">Informazioni&#8230;</string>
+    <string name="favorite_update">Aggiorno il database&#8230;</string>
+    
+
+    <string-array name="tabs">
+        <item>Cast</item>
+        <item>Informazioni</item>
+        <item>Episodi</item>
+    </string-array>
+    
+    <string-array name="language_name_array">
+        <item>English</item>
+        <item>Italiano</item>
+        <item>Deutsch</item>
+        <item>Français</item>
+        <item>Dansk</item>
+        <item>Suomeksi</item>
+        <item>Nederlands</item>
+        <item>Español</item>
+        <item>Polski</item>
+        <item>Magyar</item>
+        <item>Ελληνικά</item>
+        <item>Türkçe</item>
+        <item>русский язык</item>
+        <item>日本語</item>
+        <item>Português</item>
+        <item>中文</item>
+        <item>čeština</item>
+        <item>Slovenski</item>
+        <item>Hrvatski</item>
+        <item>한국어</item>
+        <item>Svenska</item>
+        <item>Norsk</item>
+        <item>Dansk</item>
+    </string-array>
+    <string-array name="language_abbreviation_array">
+        <item>en</item>
+        <item>it</item>
+        <item>de</item>
+        <item>fr</item>
+        <item>da</item>
+        <item>fi</item>
+        <item>nl</item>
+        <item>es</item>
+        <item>pl</item>
+        <item>hu</item>
+        <item>el</item>
+        <item>tr</item>
+        <item>ru</item>
+        <item>ja</item>
+        <item>pt</item>
+        <item>zh</item>
+        <item>cs</item>
+        <item>sl</item>
+        <item>hr</item>
+        <item>ko</item>
+        <item>sv</item>
+        <item>no</item>
+        <item>da</item>
+    </string-array>
+
+</resources>

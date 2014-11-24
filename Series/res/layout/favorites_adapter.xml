@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/FavoritesAdapterContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent" >
+
+    <TableRow
+        android:id="@+id/rowFavorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fragment_details_tablerow_padding"
+        android:layout_marginTop="@dimen/fragment_details_tablerow_padding" >
+
+        <TextView
+            android:id="@+id/tvFavSeriesName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:cacheColorHint="#00000000"
+            android:paddingLeft="@dimen/fragment_details_elements_padding"
+            android:text="TextView"
+            android:textAppearance="@style/DetailsContentTitle"
+            android:textSize="@dimen/favorite_text_size" />
+    </TableRow>
+
+</TableLayout>

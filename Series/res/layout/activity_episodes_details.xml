@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/svEpisodeDetailsContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black" >
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:id="@+id/rowEpImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/fragment_details_tablerow_padding"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/epImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fragment_details_iv_margins_paddings"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/image_view_border"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_frame_placeholder"
+                android:visibility="invisible" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowEpOverviewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/fragment_details_tablerow_padding"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/tvEpOvreviewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/fragment_details_elements_padding"
+                android:paddingRight="@dimen/fragment_details_elements_padding"
+                android:text="@string/overview"
+                android:textAppearance="@style/DetailsContentTitle" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowEpOverview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/fragment_details_tablerow_padding"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/tvEpOverview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/fragment_details_elements_padding"
+                android:paddingRight="@dimen/fragment_details_elements_padding"
+                android:text="@string/overview_placeholder"
+                android:textAppearance="@style/DetailsContent" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowWritersTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/fragment_details_tablerow_padding"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/tvWritersTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/fragment_details_elements_padding"
+                android:paddingRight="@dimen/fragment_details_elements_padding"
+                android:text="@string/writers"
+                android:textAppearance="@style/DetailsContentTitle" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowWriters"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/fragment_details_tablerow_padding"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/tvWriters"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:maxLines="2"
+                android:paddingLeft="@dimen/fragment_details_elements_padding"
+                android:paddingRight="@dimen/fragment_details_elements_padding"
+                android:text="@string/writers_placeholder"
+                android:textAppearance="@style/DetailsContent" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowDirector"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/fragment_details_tablerow_padding"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tvDirectorTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/director"
+                    android:textAppearance="@style/DetailsContentTitle" />
+
+                <TextView
+                    android:id="@+id/tvDirector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/director_placeholder"
+                    android:textAppearance="@style/DetailsContent" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowGuestStarsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/fragment_details_tablerow_padding" >
+
+            <TextView
+                android:id="@+id/tvGuestStarsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/fragment_details_elements_padding"
+                android:paddingRight="@dimen/fragment_details_elements_padding"
+                android:text="@string/guest_stars"
+                android:textAppearance="@style/DetailsContentTitle" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowGuestStars"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/fragment_details_tablerow_padding"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/tvGuestStars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/fragment_details_elements_padding"
+                android:paddingRight="@dimen/fragment_details_elements_padding"
+                android:text="@string/guest_stars_placeholder"
+                android:textAppearance="@style/DetailsContent" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowEpFirstAired"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/fragment_details_tablerow_padding"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tvEpFirstAiredTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/first_aired"
+                    android:textAppearance="@style/DetailsContentTitle" />
+
+                <TextView
+                    android:id="@+id/tvEpFirstAired"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/first_aired_placeholder"
+                    android:textAppearance="@style/DetailsContent" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowProductionCode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/fragment_details_tablerow_padding"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tvProductionCodeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/production_code"
+                    android:textAppearance="@style/DetailsContentTitle" />
+
+                <TextView
+                    android:id="@+id/tvProductionCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/production_code_placeholder"
+                    android:textAppearance="@style/DetailsContent" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowEpUserRating"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/fragment_details_tablerow_padding"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tvEpUserRatingTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/user_rating"
+                    android:textAppearance="@style/DetailsContentTitle" />
+
+                <TextView
+                    android:id="@+id/tvEpUserRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fragment_details_iv_margins_paddings"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/user_rating_placeholder"
+                    android:textAppearance="@style/DetailsContent" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowLink"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/fragment_details_tablerow_padding"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tvEpLinkTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/link"
+                    android:textAppearance="@style/DetailsContentTitle" />
+
+                <TextView
+                    android:id="@+id/tvEpIMDB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_imdb"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/imdb"
+                    android:textAppearance="@style/DetailsContent" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+</ScrollView>

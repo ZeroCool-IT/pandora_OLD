@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:layout_margin="@dimen/fragment_details_tablerow_padding"
+    android:background="@color/transparent" >
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_margin="@dimen/fragment_details_tablerow_padding" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/fragment_details_tablerow_padding"
+            android:paddingLeft="@dimen/fragment_details_tablerow_padding"
+            android:paddingRight="@dimen/fragment_details_tablerow_padding"
+            android:paddingTop="@dimen/fragment_details_tablerow_padding" >
+
+            <ImageView
+                android:id="@+id/ivY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_tv_y" />
+
+            <TextView
+                android:id="@+id/tvY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/tv_y"
+                android:textAppearance="@style/DetailsContent" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/fragment_details_tablerow_padding"
+            android:paddingLeft="@dimen/fragment_details_tablerow_padding"
+            android:paddingRight="@dimen/fragment_details_tablerow_padding" >
+
+            <ImageView
+                android:id="@+id/ivY7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_tv_y7" />
+
+            <TextView
+                android:id="@+id/tvY7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/tv_y7"
+                android:textAppearance="@style/DetailsContent" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/fragment_details_tablerow_padding"
+            android:paddingLeft="@dimen/fragment_details_tablerow_padding"
+            android:paddingRight="@dimen/fragment_details_tablerow_padding" >
+
+            <ImageView
+                android:id="@+id/ivG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_tv_g" />
+
+            <TextView
+                android:id="@+id/tvG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/tv_g"
+                android:textAppearance="@style/DetailsContent" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/fragment_details_tablerow_padding"
+            android:paddingLeft="@dimen/fragment_details_tablerow_padding"
+            android:paddingRight="@dimen/fragment_details_tablerow_padding" >
+
+            <ImageView
+                android:id="@+id/ivPG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_tv_pg" />
+
+            <TextView
+                android:id="@+id/tvPG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/tv_pg"
+                android:textAppearance="@style/DetailsContent" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/fragment_details_tablerow_padding"
+            android:paddingLeft="@dimen/fragment_details_tablerow_padding"
+            android:paddingRight="@dimen/fragment_details_tablerow_padding" >
+
+            <ImageView
+                android:id="@+id/iv14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_tv_14" />
+
+            <TextView
+                android:id="@+id/tv14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/tv_14"
+                android:textAppearance="@style/DetailsContent" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/fragment_details_tablerow_padding"
+            android:paddingLeft="@dimen/fragment_details_tablerow_padding"
+            android:paddingRight="@dimen/fragment_details_tablerow_padding" >
+
+            <ImageView
+                android:id="@+id/ivMA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_tv_ma" />
+
+            <TextView
+                android:id="@+id/tvMA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/tv_ma"
+                android:textAppearance="@style/DetailsContent" />
+        </TableRow>
+    </TableLayout>
+
+</ScrollView>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/castAdapterLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center" >
+
+    <TableRow
+        android:id="@+id/rowActor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tvActorName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/adapter_search_series_paddings"
+            android:paddingTop="@dimen/adapter_search_series_paddings"
+            android:text="@string/cast_placeholder"
+            android:textAppearance="@style/AdapterTextMain"
+            android:textColor="@color/base_green"
+            android:textSize="@dimen/adapter_search_series_textsize"
+            android:textStyle="bold" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/rowRole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvRoleTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/adapter_search_series_paddings"
+                android:text="@string/role_title"
+                android:textAppearance="@style/DetailsContent"
+                android:textColor="@color/base_green" />
+
+            <TextView
+                android:id="@+id/tvRole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/adapter_search_series_paddings"
+                android:paddingLeft="@dimen/adapter_search_series_paddings"
+                android:text="@string/role_placeholder"
+                android:textAppearance="@style/DetailsContent" />
+        </LinearLayout>
+    </TableRow>
+
+</TableLayout>

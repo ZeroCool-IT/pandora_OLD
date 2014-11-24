@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ActorDetailsContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/svActor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableLayout
+            android:id="@+id/TableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:id="@+id/rowActorImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/ivActorPic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/fragment_details_iv_margins_paddings"
+                    android:layout_marginLeft="@dimen/fragment_details_iv_margins_paddings"
+                    android:layout_marginRight="@dimen/fragment_details_iv_margins_paddings"
+                    android:layout_marginTop="@dimen/fragment_details_iv_margins_paddings"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_view_border"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_actor_placeholder"
+                    android:visibility="invisible" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowActorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tvAcName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/cast_placeholder"
+                    android:textAppearance="@style/DetailsContentTitle" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowActorRole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fragment_details_tablerow_padding"
+                android:layout_weight="1" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/tvActorRoleTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/fragment_details_elements_padding"
+                        android:paddingRight="@dimen/fragment_details_elements_padding"
+                        android:text="@string/role_title"
+                        android:textAppearance="@style/DetailsContent"
+                        android:textColor="@color/base_green" />
+
+                    <TextView
+                        android:id="@+id/tvActorRole"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/fragment_details_elements_padding"
+                        android:text="@string/role_placeholder"
+                        android:textAppearance="@style/DetailsContent" />
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>

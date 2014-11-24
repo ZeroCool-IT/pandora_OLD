@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="valid_string">[a-zA-Z0-9.,? ]*</string>
+    <string name="search_series_id1">http://thetvdb.com/api/GetSeries.php?seriesname=</string>
+    <string name="search_series_id2">&amp;language=</string>
+
+    
+    <string name="api_key">398A978F1EB64BB4</string>
+    
+    <string name="banner_download_uri">"http://thetvdb.com/banners/"</string>
+    <string name="imdb_series_URI">http://www.imdb.com/title/</string>
+	<string name="search_series_cast1">http://thetvdb.com/api/</string>
+	<string name="search_series_cast2">/series/</string>
+	<string name="search_series_cast3">/actors.xml</string>
+	<string name="default_language_value">en</string>
+	<string name="thetvdb_share_link">http://thetvdb.com/?tab=series&amp;id=</string>
+	<string name="thetvdb_search_uri1">http://thetvdb.com/api/</string>
+	<string name="thetvdb_search_uri2">/series/</string>
+	<string name="thetvdb_search_uri3">/all/</string>
+	<string name="thetvdb_search_uri4">.zip</string>
+	<string name="favorite_title">Favorite</string>
+	<string name="unfavorite_title">Unfavorite</string>
+	
+    
+	
+	 <!-- Layout PlaceHolder -->
+    <string name="cast_placeholder">Cast Informations</string>
+    <string name="runtime_placeholder">-</string>
+    <string name="network_placheholder">-</string>
+    <string name="staus_placeholder">-</string>
+    <string name="network_placeholder">-</string>
+    <string name="MPAAplaceholder">-</string>
+    <string name="user_rating_placeholder">-</string>
+    <string name="first_aired_placeholder">-</string>
+    <string name="genre_placeholder">-</string>
+    <string name="overview_placeholder">-</string>
+    <string name="summary_placeholder">Series Summary</string>
+    <string name="season_placeholder">00</string>
+    <string name="episode_ticker_placeholder">00</string>
+    <string name="episode_title_placeholder">Episode Title</string>
+    <string name="guest_stars_placeholder">-</string>
+    <string name="production_code_placeholder">-</string>
+    <string name="writers_placeholder">-</string>
+    <string name="director_placeholder">-</string>
+    <string name="role_placeholder">-</string>
+    <string name="group_placeholder">Group</string>
+	
+</resources>

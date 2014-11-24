@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvCastAdapter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:paddingBottom="@dimen/adapter_search_series_paddings"
+    android:paddingLeft="@dimen/adapter_search_series_paddings"
+    android:paddingTop="@dimen/adapter_search_series_paddings"
+    android:text="TextView Placeholder"
+    android:textColor="@color/base_green"
+    android:textSize="@dimen/adapter_search_series_textsize"
+    android:textStyle="bold" />
+

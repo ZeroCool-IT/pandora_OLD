@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/summaryScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@color/black" >
+
+    <TableLayout
+        android:id="@+id/summaryTableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:id="@+id/rowBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fragment_details_tablerow_padding" >
+
+            <ImageView
+                android:id="@+id/ivBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fragment_details_iv_margins_paddings"
+                android:layout_marginRight="@dimen/fragment_details_iv_margins_paddings"
+                android:layout_marginTop="@dimen/fragment_details_iv_margins_paddings"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/image_view_border"
+                android:baselineAlignBottom="false"
+                android:contentDescription="Series Banner"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_banner_placeholder"
+                android:visibility="invisible" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowOverviewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fragment_details_tablerow_padding" >
+
+            <TextView
+                android:id="@+id/tvEpOverviewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/fragment_details_elements_padding"
+                android:paddingRight="@dimen/fragment_details_elements_padding"
+                android:text="@string/overview"
+                android:textColor="@color/base_green"
+                android:textColorLink="@color/base_green"
+                android:textSize="@dimen/fragment_details_textview_title"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowOverview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fragment_details_tablerow_padding" >
+
+            <TextView
+                android:id="@+id/tvOverview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/fragment_details_elements_padding"
+                android:paddingRight="@dimen/fragment_details_elements_padding"
+                android:text="@string/overview_placeholder"
+                android:textColor="@color/white"
+                android:textSize="@dimen/fragment_details_tv_element_content" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowFirstAired"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fragment_details_tablerow_padding"
+            android:paddingLeft="@dimen/fragment_details_tablerow_padding" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tvFirstAiredTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/first_aired"
+                    android:textAppearance="@style/DetailsContentTitle" />
+
+                <TextView
+                    android:id="@+id/tvFirstAired"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/fragment_details_elements_padding"
+                    android:gravity="center"
+                    android:text="@string/first_aired_placeholder"
+                    android:textAppearance="@style/DetailsContent" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowMPAARating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fragment_details_tablerow_padding"
+            android:paddingLeft="@dimen/fragment_details_tablerow_padding" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tvMPAATitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/MPAA"
+                    android:textAppearance="@style/DetailsContentTitle" />
+
+                <TextView
+                    android:id="@+id/tvMPAA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_question"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/MPAAplaceholder"
+                    android:textAppearance="@style/DetailsContent" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowGenre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fragment_details_tablerow_padding"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tvGenreTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/genre"
+                    android:textAppearance="@style/DetailsContentTitle" />
+
+                <TextView
+                    android:id="@+id/tvGenre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="2"
+                    android:minLines="2"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:text="@string/genre_placeholder"
+                    android:textAppearance="@style/DetailsContent" />
+
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fragment_details_tablerow_padding" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tvUserRatingTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/user_rating"
+                    android:textAppearance="@style/DetailsContentTitle" />
+
+                <TextView
+                    android:id="@+id/tvUserRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/user_rating_placeholder"
+                    android:textAppearance="@style/DetailsContent" />
+
+                <TextView
+                    android:id="@+id/tvRuntimeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/runtime_title"
+                    android:textAppearance="@style/DetailsContentTitle" />
+
+                <TextView
+                    android:id="@+id/tvRuntime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/runtime_placeholder"
+                    android:textAppearance="@style/DetailsContent" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowNetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fragment_details_tablerow_padding" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tvNetworkTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/network_title"
+                    android:textAppearance="@style/DetailsContentTitle" />
+
+                <TextView
+                    android:id="@+id/tvNetwork"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/network_placheholder"
+                    android:textAppearance="@style/DetailsContent" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/fragment_details_tablerow_padding" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tvStatusTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/status_title"
+                    android:textAppearance="@style/DetailsContentTitle" />
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/staus_placeholder"
+                    android:textAppearance="@style/DetailsContent" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowIMDb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tvLinkTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/link"
+                    android:textAppearance="@style/DetailsContentTitle" />
+
+                <TextView
+                    android:id="@+id/tvIMDb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_imdb"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="@dimen/fragment_details_elements_padding"
+                    android:paddingRight="@dimen/fragment_details_elements_padding"
+                    android:text="@string/imdb"
+                    android:textAppearance="@style/DetailsContent" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+</ScrollView>

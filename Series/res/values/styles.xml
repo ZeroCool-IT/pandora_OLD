@@ -1,0 +1,47 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+       
+    </style>
+    
+    <style name="DetailsContentTitle" parent="AppBaseTheme">
+        <item name="android:textSize">@dimen/fragment_details_textview_title</item>
+        <item name="android:textColor">@color/base_green</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="DetailsContent" parent="AppBaseTheme">
+        <item name="android:textSize">@dimen/fragment_details_tv_element_content</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+    <style name="AdapterTextMain" parent="AppBaseTheme">
+        <item name="android:textSize">@dimen/adapter_search_series_textsize</item>
+        <item name="android:textColor">@color/base_green</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">@dimen/adapter_search_series_paddings</item>
+        <item name="android:paddingTop">@dimen/adapter_search_series_paddings</item>
+        <item name="android:paddingBottom">@dimen/adapter_search_series_paddings</item>
+    </style>
+    
+    <style name="Transparent" parent="@android:style/Theme.NoTitleBar">
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowNoTitle">true</item>      
+    <item name="android:backgroundDimEnabled">false</item>
+</style>
+</resources>

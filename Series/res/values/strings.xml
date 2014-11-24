@@ -1,0 +1,137 @@
+<resources>
+
+    <string name="app_name">TV Series</string>
+    <string name="hello_world">Work in progress! Here will be favorites! We are working for you&#8230;</string>
+    <string name="action_settings">Settings</string>
+    <string name="search_title">Search</string>
+    <string name="search_hint">Search Series</string>
+    <string name="title_activity_searchable">Search results:</string>
+    <string name="dialog_message_no_connection">No internet connection! Check your settings and try again!</string>
+    <string name="dialog_title_warning">Warning!</string>
+    <string name="dialog_button_OK">OK</string>
+    <string name="dialog_title_error">Error!</string>
+    <string name="dialog_message_server_error">Uh oh! Seems like the server is not available at the moment! Try again later!</string>
+    <string name="dialog_message_no_data">Uh oh, no data was received from the server! Please, try again later!</string>
+    <string name="dialog_message_request_error">Error retrieving details, please try again later!</string>
+    <string name="dialog_message_refresh_error">Series need to be refreshed before adding to favorites!</string>
+    <string name="dialog_message_illegal_arguments">Couldn\'t search for this! Please, enter valid values and try again!</string>
+    <string name="dialog_title_no_results">No results!</string>
+    <string name="searching">Searching&#8230;</string>
+    <string name="retrieving">Retrieving details&#8230;</string>
+    <string name="title_activity_details">Details</string>
+    <string name="not_available">N/A</string>
+    <string name="overview">Overview</string>
+    <string name="first_aired">First Aired:</string>
+    <string name="genre">Genre:</string>
+    <string name="user_rating">User Rating:</string>
+    <string name="MPAA">Rated:</string>
+    <string name="network">Network:</string>
+    <string name="status_title">Status:</string>
+    <string name="network_title">Network:</string>
+    <string name="runtime_title">Runtime:</string>
+    <string name="imdb">View on IMDb</string>
+    <string name="link">Link:</string>
+    <string name="select_language">Select language</string>
+    <string name="no_connection_error">Couldn\'t retrieve infos now, please try again later!</string>
+    <string name="no_info_warning">Sorry, no info available!</string>
+    <string name="specials">Specials</string>
+    <string name="production_code">Production Code:</string>
+    <string name="writers">Writers:</string>
+    <string name="director">Director:</string>
+    <string name="guest_stars">Guest Stars:</string>
+    <string name="no_link_warning">Sorry, no IMDb link available!</string>
+    <string name="role_title">As:</string>
+    <string name="tvEpisodeTickerTitle">Episode:</string>
+    <string name="tvSeason">Season:</string>
+    <string name="save">Save</string>
+    <string name="search_language">Search language</string>
+    <string name="title_activity_preferences">Preferences</string>
+    <string name="share">Share</string>
+    <string name="share_series_message">I think you would love this TV series:</string>
+    <string name="share_episode_message1">I think you would love this episode of</string>
+    <string name="share_episode_message2">Season</string>
+    <string name="share_episode_message3">Episode</string>
+    <string name="no_fav">No favorite series yet&#8230; \nUse the Search function above to begin</string>
+    <string name="favorites">Your favorite series:</string>
+    <string name="clear_favorites">Clear favorites</string>
+    <string name="erase_menu_message">Your favorites list will be erased!</string>
+    <string name="erase_menu_title">Are you sure?</string>
+    <string name="erase_menu_positive">I\'m sure!</string>
+    <string name="erase_menu_negative">Don\'t do it!</string>
+    <string name="tback">Press back again to exit!</string>
+    <string name="fave_add">Added to favorite!</string>
+    <string name="fave_removed">Removed from favorite!</string>
+    <string name="season">Season</string>
+    <string name="tv_y">This program is designed to be appropriate for all children</string>
+    <string name="tv_y7">This program is designed for children age 7 and above</string>
+    <string name="tv_g">Most parents would find this program suitable for all ages</string>
+    <string name="tv_pg">This program contains material that parents may find unsuitable for younger children</string>
+    <string name="tv_14">This program contains some material that many parents would find unsuitable for children under 14 years of age</string>
+    <string name="tv_ma">This program is specifically designed to be viewed by adults and therefore may be unsuitable for children under 17</string>
+	<string name="parental_guidelines_title">Parental Guidelines</string>
+    <string name="about">Tv Series\nAndroid Application\n\ndeveloped by\nThe Lonely Dev\n\nMobile Programming Course\nComputer Engineering degree\n\nUniversity of Rome\n\"Tor Vergata\"\n\nJuly 2014</string>
+    <string name="about_title">About&#8230;</string>
+    <string name="mantra_title">Remember</string>
+    <string name="mantra">Keep It Simple, Stupid!</string>
+    <string name="favorite_update">Updating database&#8230;</string>
+   
+    
+    <!-- Array -->
+    <string-array name="tabs">
+        <item>Cast</item>
+        <item>Summary</item>
+        <item>Episodes</item>
+    </string-array>
+    <string-array name="language_name_array">
+        <item>English</item>
+        <item>Italiano</item>
+        <item>Deutsch</item>
+        <item>Français</item>
+        <item>Dansk</item>
+        <item>Suomeksi</item>
+        <item>Nederlands</item>
+        <item>Español</item>
+        <item>Polski</item>
+        <item>Magyar</item>
+        <item>Ελληνικά</item>
+        <item>Türkçe</item>
+        <item>русский язык</item>
+        <item>日本語</item>
+        <item>Português</item>
+        <item>中文</item>
+        <item>čeština</item>
+        <item>Slovenski</item>
+        <item>Hrvatski</item>
+        <item>한국어</item>
+        <item>Svenska</item>
+        <item>Norsk</item>
+        <item>Dansk</item>
+    </string-array>
+    <string-array name="language_abbreviation_array">
+        <item>en</item>
+        <item>it</item>
+        <item>de</item>
+        <item>fr</item>
+        <item>da</item>
+        <item>fi</item>
+        <item>nl</item>
+        <item>es</item>
+        <item>pl</item>
+        <item>hu</item>
+        <item>el</item>
+        <item>tr</item>
+        <item>ru</item>
+        <item>ja</item>
+        <item>pt</item>
+        <item>zh</item>
+        <item>cs</item>
+        <item>sl</item>
+        <item>hr</item>
+        <item>ko</item>
+        <item>sv</item>
+        <item>no</item>
+        <item>da</item>
+    </string-array>
+        
+
+</resources>
