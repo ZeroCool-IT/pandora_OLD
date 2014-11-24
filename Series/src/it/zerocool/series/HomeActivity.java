@@ -39,9 +39,7 @@ import android.widget.Toast;
  */
 public class HomeActivity extends Activity {
 
-	//Git Push Test
-	//Git Push Test 2
-	//Git Push test 3
+	//Tutto OK!
 	protected ArrayList<Series> favorites;
 	FavoriteDBHelper dbHelper;
 	SQLiteDatabase db;
