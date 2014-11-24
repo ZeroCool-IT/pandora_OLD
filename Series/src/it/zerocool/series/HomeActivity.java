@@ -41,6 +41,7 @@ public class HomeActivity extends Activity {
 
 	//Git Push Test
 	//Git Push Test 2
+	//Git Push test 3
 	protected ArrayList<Series> favorites;
 	FavoriteDBHelper dbHelper;
 	SQLiteDatabase db;
