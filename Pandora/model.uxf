@@ -4,18 +4,18 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>342</x>
-      <y>243</y>
+      <x>279</x>
+      <y>252</y>
       <w>189</w>
       <h>216</h>
     </coordinates>
     <panel_attributes>bg=green
-Venue
+Place
 --
 -id: long
 -name: String
 -image: String
--tag: List&lt;String&gt;
+-tags: List&lt;String&gt;
 -description: String
 
 --
@@ -30,8 +30,8 @@ Responsibilities
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>432</x>
-      <y>450</y>
+      <x>369</x>
+      <y>459</y>
       <w>153</w>
       <h>261</h>
     </coordinates>
@@ -42,8 +42,8 @@ Responsibilities
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>387</x>
-      <y>693</y>
+      <x>324</x>
+      <y>702</y>
       <w>99</w>
       <h>63</h>
     </coordinates>
@@ -57,8 +57,8 @@ Sleep
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>288</x>
-      <y>450</y>
+      <x>225</x>
+      <y>459</y>
       <w>171</w>
       <h>261</h>
     </coordinates>
@@ -70,8 +70,8 @@ Sleep
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>522</x>
-      <y>693</y>
+      <x>459</x>
+      <y>702</y>
       <w>117</w>
       <h>63</h>
     </coordinates>
@@ -84,8 +84,8 @@ ToSee
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>333</x>
-      <y>450</y>
+      <x>270</x>
+      <y>459</y>
       <w>423</w>
       <h>261</h>
     </coordinates>
@@ -96,8 +96,8 @@ ToSee
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>684</x>
-      <y>693</y>
+      <x>621</x>
+      <y>702</y>
       <w>117</w>
       <h>63</h>
     </coordinates>
@@ -111,8 +111,8 @@ Service
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>432</x>
-      <y>450</y>
+      <x>369</x>
+      <y>459</y>
       <w>27</w>
       <h>261</h>
     </coordinates>
@@ -123,8 +123,8 @@ Service
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>90</x>
-      <y>243</y>
+      <x>27</x>
+      <y>252</y>
       <w>135</w>
       <h>99</h>
     </coordinates>
@@ -133,7 +133,7 @@ ContactCard
 --
 -id: Long
 -address: String
--telephone: String
+-telephone: Telephone
 -email: String
 -url: String
 
@@ -143,8 +143,8 @@ ContactCard
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>216</x>
-      <y>279</y>
+      <x>153</x>
+      <y>288</y>
       <w>144</w>
       <h>45</h>
     </coordinates>
@@ -157,8 +157,8 @@ m2=1..1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>225</x>
-      <y>693</y>
+      <x>162</x>
+      <y>702</y>
       <w>126</w>
       <h>63</h>
     </coordinates>
@@ -173,8 +173,8 @@ Eat
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>90</x>
-      <y>369</y>
+      <x>27</x>
+      <y>378</y>
       <w>135</w>
       <h>72</h>
     </coordinates>
@@ -191,8 +191,8 @@ TimeCard
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>63</x>
-      <y>693</y>
+      <x>0</x>
+      <y>702</y>
       <w>126</w>
       <h>63</h>
     </coordinates>
@@ -207,8 +207,8 @@ Shop
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>108</x>
-      <y>450</y>
+      <x>45</x>
+      <y>459</y>
       <w>351</w>
       <h>261</h>
     </coordinates>
@@ -219,8 +219,8 @@ Shop
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>216</x>
-      <y>387</y>
+      <x>153</x>
+      <y>396</y>
       <w>144</w>
       <h>45</h>
     </coordinates>
@@ -233,8 +233,8 @@ m2=1..1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>648</x>
-      <y>306</y>
+      <x>585</x>
+      <y>315</y>
       <w>135</w>
       <h>72</h>
     </coordinates>
@@ -248,8 +248,8 @@ Position
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>522</x>
-      <y>324</y>
+      <x>459</x>
+      <y>333</y>
       <w>144</w>
       <h>45</h>
     </coordinates>
@@ -262,8 +262,8 @@ is located &gt;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>342</x>
-      <y>0</y>
+      <x>279</x>
+      <y>9</y>
       <w>189</w>
       <h>234</h>
     </coordinates>
@@ -291,8 +291,8 @@ Responsibilities
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>144</x>
-      <y>72</y>
+      <x>81</x>
+      <y>81</y>
       <w>216</w>
       <h>189</h>
     </coordinates>
@@ -305,8 +305,8 @@ m2=1..1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>522</x>
-      <y>72</y>
+      <x>459</x>
+      <y>81</y>
       <w>288</w>
       <h>252</h>
     </coordinates>
