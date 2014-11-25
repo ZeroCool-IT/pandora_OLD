@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>279</x>
-      <y>252</y>
+      <x>549</x>
+      <y>243</y>
       <w>189</w>
       <h>216</h>
     </coordinates>
@@ -17,6 +17,7 @@ Place
 -image: String
 -tags: List&lt;String&gt;
 -description: String
+-location: Location
 
 --
 #Operations
@@ -30,8 +31,8 @@ Responsibilities
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>369</x>
-      <y>459</y>
+      <x>639</x>
+      <y>450</y>
       <w>153</w>
       <h>261</h>
     </coordinates>
@@ -42,8 +43,8 @@ Responsibilities
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>324</x>
-      <y>702</y>
+      <x>594</x>
+      <y>693</y>
       <w>99</w>
       <h>63</h>
     </coordinates>
@@ -57,8 +58,8 @@ Sleep
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>225</x>
-      <y>459</y>
+      <x>495</x>
+      <y>450</y>
       <w>171</w>
       <h>261</h>
     </coordinates>
@@ -70,8 +71,8 @@ Sleep
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>459</x>
-      <y>702</y>
+      <x>729</x>
+      <y>693</y>
       <w>117</w>
       <h>63</h>
     </coordinates>
@@ -84,8 +85,8 @@ ToSee
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>270</x>
-      <y>459</y>
+      <x>540</x>
+      <y>450</y>
       <w>423</w>
       <h>261</h>
     </coordinates>
@@ -96,8 +97,8 @@ ToSee
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>621</x>
-      <y>702</y>
+      <x>891</x>
+      <y>693</y>
       <w>117</w>
       <h>63</h>
     </coordinates>
@@ -111,8 +112,8 @@ Service
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>369</x>
-      <y>459</y>
+      <x>639</x>
+      <y>450</y>
       <w>27</w>
       <h>261</h>
     </coordinates>
@@ -123,19 +124,22 @@ Service
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>27</x>
-      <y>252</y>
-      <w>135</w>
-      <h>99</h>
+      <x>270</x>
+      <y>243</y>
+      <w>162</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>bg=orange
 ContactCard
 --
 -id: Long
 -address: String
--telephone: Telephone
 -email: String
 -url: String
+--
+Responsibilities
+*-- belong to*
+
 
 </panel_attributes>
     <additional_attributes/>
@@ -143,8 +147,8 @@ ContactCard
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>153</x>
-      <y>288</y>
+      <x>423</x>
+      <y>279</y>
       <w>144</w>
       <h>45</h>
     </coordinates>
@@ -157,8 +161,8 @@ m2=1..1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>162</x>
-      <y>702</y>
+      <x>432</x>
+      <y>693</y>
       <w>126</w>
       <h>63</h>
     </coordinates>
@@ -173,17 +177,17 @@ Eat
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>27</x>
-      <y>378</y>
-      <w>135</w>
+      <x>189</x>
+      <y>369</y>
+      <w>243</w>
       <h>72</h>
     </coordinates>
     <panel_attributes>bg=orange
 TimeCard
 --
--openFrom: Time
--openTo: Time
--openDays: Day[]
+-openFrom: GregorianCalendar
+-openTo: GregorianCalendar
+-openDays: List&lt;GregorianCalendar&gt;
 
 </panel_attributes>
     <additional_attributes/>
@@ -191,8 +195,8 @@ TimeCard
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>702</y>
+      <x>270</x>
+      <y>693</y>
       <w>126</w>
       <h>63</h>
     </coordinates>
@@ -207,8 +211,8 @@ Shop
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>45</x>
-      <y>459</y>
+      <x>315</x>
+      <y>450</y>
       <w>351</w>
       <h>261</h>
     </coordinates>
@@ -219,8 +223,8 @@ Shop
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>153</x>
-      <y>396</y>
+      <x>423</x>
+      <y>387</y>
       <w>144</w>
       <h>45</h>
     </coordinates>
@@ -233,37 +237,8 @@ m2=1..1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>585</x>
-      <y>315</y>
-      <w>135</w>
-      <h>72</h>
-    </coordinates>
-    <panel_attributes>bg=orange
-Position
---
--latitude
--longitude</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>459</x>
-      <y>333</y>
-      <w>144</w>
-      <h>45</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=1..1
-m2=1..1
-is located &gt;</panel_attributes>
-    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>279</x>
-      <y>9</y>
+      <x>549</x>
+      <y>0</y>
       <w>189</w>
       <h>234</h>
     </coordinates>
@@ -278,21 +253,21 @@ Event
 -image: String
 -tag: List&lt;String&gt;
 -description: String
+-location: Location
 
 --
 #Operations
 #some operations#
 --
 Responsibilities
-*-- takes place*
 *-- has a*</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>81</x>
-      <y>81</y>
+      <x>351</x>
+      <y>72</y>
       <w>216</w>
       <h>189</h>
     </coordinates>
@@ -303,18 +278,34 @@ m2=1..1
     <additional_attributes>10.0;190.0;10.0;10.0;220.0;10.0</additional_attributes>
   </element>
   <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>252</y>
+      <w>126</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>bg=blue
+TelephoneNumber
+--
+-intPrefix: String
+-prefix: String
+-number: String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
     <id>Relation</id>
     <coordinates>
-      <x>459</x>
-      <y>81</y>
-      <w>288</w>
-      <h>252</h>
+      <x>117</x>
+      <y>270</y>
+      <w>171</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=1..1
+m1=0..1
 m2=1..1
-takes place &gt;
- </panel_attributes>
-    <additional_attributes>220.0;260.0;220.0;10.0;10.0;10.0</additional_attributes>
+belong to &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
   </element>
 </diagram>

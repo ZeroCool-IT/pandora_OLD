@@ -23,8 +23,40 @@ public class TimeCard {
 	/**
 	 * Public constructor
 	 */
-	public TimeCard() {
-		// TODO Auto-generated constructor stub
+	public TimeCard(GregorianCalendar openFrom, GregorianCalendar openTo) {
+		this.openFrom = openFrom;
+		this.openTo = openTo;
+		days = new LinkedList<GregorianCalendar>();
+	}
+
+
+	public GregorianCalendar getOpenFrom() {
+		return openFrom;
+	}
+
+
+	public void setOpenFrom(GregorianCalendar openFrom) {
+		this.openFrom = openFrom;
+	}
+
+
+	public GregorianCalendar getOpenTo() {
+		return openTo;
+	}
+
+
+	public void setOpenTo(GregorianCalendar openTo) {
+		this.openTo = openTo;
+	}
+
+
+	public LinkedList<GregorianCalendar> getDays() {
+		return days;
+	}
+
+
+	public void setDays(LinkedList<GregorianCalendar> days) {
+		this.days = days;
 	}
 
 }
