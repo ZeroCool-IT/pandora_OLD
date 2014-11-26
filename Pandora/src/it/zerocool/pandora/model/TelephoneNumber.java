@@ -12,9 +12,9 @@ package it.zerocool.pandora.model;
  */
 public class TelephoneNumber {
 
-	private String intPrefix;
-	private String prefix;
-	private String number;
+	protected String intPrefix;
+	protected String prefix;
+	protected String number;
 	
 	/**
 	 * Public constructor of a phone number
