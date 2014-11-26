@@ -247,9 +247,8 @@ Event
 --
 -id: long
 -name: String
--date: Date
--timeFrom: Time
--timeTo: Time
+-date: GregorianCalendar
+-until: GregorianCalendar
 -image: String
 -tag: List&lt;String&gt;
 -description: String
