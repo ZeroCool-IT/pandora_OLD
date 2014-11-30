@@ -180,13 +180,11 @@ Eat
       <x>189</x>
       <y>369</y>
       <w>243</w>
-      <h>72</h>
+      <h>54</h>
     </coordinates>
     <panel_attributes>bg=orange
 TimeCard
 --
--openFrom: GregorianCalendar
--openTo: GregorianCalendar
 -openDays: List&lt;GregorianCalendar&gt;
 
 </panel_attributes>

@@ -15,38 +15,14 @@ import java.util.LinkedList;
  */
 public class TimeCard {
 	
-	protected GregorianCalendar openFrom;
-	protected GregorianCalendar openTo;
 	protected LinkedList<GregorianCalendar> days;
 	
 
 	/**
 	 * Public constructor
 	 */
-	public TimeCard(GregorianCalendar openFrom, GregorianCalendar openTo) {
-		this.openFrom = openFrom;
-		this.openTo = openTo;
+	public TimeCard() {
 		days = new LinkedList<GregorianCalendar>();
-	}
-
-
-	public GregorianCalendar getOpenFrom() {
-		return openFrom;
-	}
-
-
-	public void setOpenFrom(GregorianCalendar openFrom) {
-		this.openFrom = openFrom;
-	}
-
-
-	public GregorianCalendar getOpenTo() {
-		return openTo;
-	}
-
-
-	public void setOpenTo(GregorianCalendar openTo) {
-		this.openTo = openTo;
 	}
 
 
