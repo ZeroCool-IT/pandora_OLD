@@ -51,7 +51,6 @@ Responsibilities
     <panel_attributes>bg=green
 Sleep
 --
--stars: int
 </panel_attributes>
     <additional_attributes/>
   </element>

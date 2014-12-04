@@ -12,7 +12,6 @@ package it.zerocool.pandora.model;
  */
 public class Sleep extends Place {
 	
-	protected int stars;
 
 	/**
 	 * Public constructor
@@ -20,20 +19,5 @@ public class Sleep extends Place {
 	 */
 	public Sleep(long id) {
 		super(id);
-		stars = 0;
-	}
-
-	/**
-	 * @return the stars
-	 */
-	public int getStars() {
-		return stars;
-	}
-
-	/**
-	 * @param stars the stars to set
-	 */
-	public void setStars(int stars) {
-		this.stars = stars;
 	}
 }
