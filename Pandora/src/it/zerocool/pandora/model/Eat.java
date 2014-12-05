@@ -15,7 +15,7 @@ public class Eat extends Place {
 	/**
 	 * @param id is the id of the place
 	 */
-	public Eat(long id) {
+	public Eat(int id) {
 		super(id);
 		// TODO Auto-generated constructor stub
 	}

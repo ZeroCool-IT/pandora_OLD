@@ -17,7 +17,7 @@ public class Sleep extends Place {
 	 * Public constructor
 	 * @param id is the id of the place
 	 */
-	public Sleep(long id) {
+	public Sleep(int id) {
 		super(id);
 	}
 }

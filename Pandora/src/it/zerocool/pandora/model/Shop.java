@@ -16,7 +16,7 @@ public class Shop extends Place {
 	 * Public constructor
 	 * @param id is the id of the place
 	 */
-	public Shop(long id) {
+	public Shop(int id) {
 		super(id);
 	}
 

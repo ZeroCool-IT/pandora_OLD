@@ -17,7 +17,7 @@ public class ToSee extends Place {
 	 * Public constructor
 	 * @param id
 	 */
-	public ToSee(long id) {
+	public ToSee(int id) {
 		super(id);
 	}
 

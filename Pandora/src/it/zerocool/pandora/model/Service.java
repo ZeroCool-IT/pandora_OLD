@@ -16,7 +16,7 @@ public class Service extends Place {
 	 * Public constructor
 	 * @param id is the id of the place
 	 */
-	public Service(long id) {
+	public Service(int id) {
 		super(id);
 	}
 

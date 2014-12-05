@@ -6,6 +6,7 @@
 package it.zerocool.pandora.model;
 
 import java.util.LinkedList;
+import java.util.StringTokenizer;
 
 import android.location.Location;
 
@@ -16,9 +17,10 @@ import android.location.Location;
  */
 public class Place {
 
-	protected long id;
+	protected int id;
 	protected String name;
 	protected String image;
+	protected String fsqrLink;
 	protected LinkedList<String> tags;
 	protected String description;
 	protected ContactCard contact;
@@ -29,17 +31,16 @@ public class Place {
 	/**
 	 * Public constructor
 	 */
-	public Place(long id) {
+	public Place(int id) {
 		this.id = id;
 		tags =  new LinkedList<String>();
 	}
 
 
-
 	/**
 	 * @return the id
 	 */
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
@@ -48,7 +49,7 @@ public class Place {
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -91,6 +92,24 @@ public class Place {
 
 
 	/**
+	 * @return the link to 4square
+	 */
+	public String getFsqrLink() {
+		return fsqrLink;
+	}
+
+
+
+	/**
+	 * @param fsqrLink the 4square link to set
+	 */
+	public void setFsqrLink(String fsqrLink) {
+		this.fsqrLink = fsqrLink;
+	}
+
+
+
+	/**
 	 * @return the tags list
 	 */
 	public LinkedList<String> getTags() {
@@ -104,6 +123,20 @@ public class Place {
 	 */
 	public void setTags(LinkedList<String> tags) {
 		this.tags = tags;
+	}
+	
+	/**
+	 * Add the tags to tags' list from a string in CSV format
+	 * @param t is the string in CSV format
+	 */
+	public void setTagsFromCSV(String csv) {
+		if (csv != null) {
+			StringTokenizer tokenizer = new StringTokenizer(csv, ",");
+			while (tokenizer.hasMoreTokens()) {
+				String toAdd = tokenizer.nextToken();
+				getTags().add(toAdd);
+			}
+		}
 	}
 
 

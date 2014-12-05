@@ -12,7 +12,7 @@ package it.zerocool.pandora.model;
  */
 public class ContactCard {
 	
-	protected long id;
+	protected int id;
 	protected String address;
 	protected TelephoneNumber telephone;
 	protected String email;
@@ -21,21 +21,21 @@ public class ContactCard {
 	/**
 	 * Public constructor
 	 */
-	public ContactCard(long id) {
+	public ContactCard(int id) {
 		this.id = id;
 	}
 
 	/**
 	 * @return the id
 	 */
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

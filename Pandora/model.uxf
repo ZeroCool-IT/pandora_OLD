@@ -6,22 +6,23 @@
     <coordinates>
       <x>549</x>
       <y>243</y>
-      <w>189</w>
+      <w>234</w>
       <h>207</h>
     </coordinates>
     <panel_attributes>bg=green
 Place
 --
--id: long
+-id: int
 -name: String
 -image: String
+-fsqr: String
 -tags: List&lt;String&gt;
 -description: String
 -location: Location
 
 --
 #Operations
-#some operations#
++setTagsFromCSV(csv: String): void
 --
 Responsibilities
 *-- has a*
@@ -131,7 +132,7 @@ Service
     <panel_attributes>bg=orange
 ContactCard
 --
--id: Long
+-id: int
 -address: String
 -email: String
 -url: String
@@ -184,6 +185,7 @@ Eat
     <panel_attributes>bg=orange
 TimeCard
 --
+-id: int
 -openDays: List&lt;GregorianCalendar&gt;
 
 </panel_attributes>
@@ -236,13 +238,13 @@ m2=1..1
     <coordinates>
       <x>549</x>
       <y>0</y>
-      <w>189</w>
+      <w>234</w>
       <h>234</h>
     </coordinates>
     <panel_attributes>bg=green
 Event
 --
--id: long
+-id: int
 -name: String
 -date: GregorianCalendar
 -until: GregorianCalendar
@@ -253,7 +255,7 @@ Event
 
 --
 #Operations
-#some operations#
++setTagsFromCSV(csv: String): void
 --
 Responsibilities
 *-- has a*</panel_attributes>

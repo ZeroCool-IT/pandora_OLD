@@ -7,6 +7,7 @@ package it.zerocool.pandora.model;
 
 import java.util.GregorianCalendar;
 import java.util.LinkedList;
+import java.util.StringTokenizer;
 
 import android.location.Location;
 
@@ -16,7 +17,7 @@ import android.location.Location;
  */
 public class Event {
 	
-	protected long id;
+	protected int id;
 	protected String name;
 	protected GregorianCalendar date;
 	protected GregorianCalendar until;
@@ -31,16 +32,18 @@ public class Event {
 	 * Public constructor
 	 * @param id is the unique id for the event
 	 */
-	public Event(long id) {
+	public Event(int id) {
 		this.id = id;
 		this.tags = new LinkedList<String>();
+		date = new GregorianCalendar();
+		until = new GregorianCalendar();
 	}
 
 
 	/**
 	 * @return the id of the event
 	 */
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
@@ -48,7 +51,7 @@ public class Event {
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -86,6 +89,22 @@ public class Event {
 
 
 	/**
+	 * @return the until
+	 */
+	public GregorianCalendar getUntil() {
+		return until;
+	}
+
+
+	/**
+	 * @param until the until to set
+	 */
+	public void setUntil(GregorianCalendar until) {
+		this.until = until;
+	}
+
+
+	/**
 	 * @return the image of the event
 	 */
 	public String getImage() {
@@ -114,6 +133,20 @@ public class Event {
 	 */
 	public void setTags(LinkedList<String> tags) {
 		this.tags = tags;
+	}
+	
+	/**
+	 * Add the tags to tags' list from a string in CSV format
+	 * @param t is the string in CSV format
+	 */
+	public void setTagsFromCSV(String csv) {
+		if (csv != null) {
+			StringTokenizer tokenizer = new StringTokenizer(csv, ",");
+			while (tokenizer.hasMoreTokens()) {
+				String toAdd = tokenizer.nextToken();
+				getTags().add(toAdd);
+			}
+		}
 	}
 
 
@@ -162,6 +195,22 @@ public class Event {
 	 */
 	public void setContact(ContactCard contact) {
 		this.contact = contact;
+	}
+	
+	//REVIEW
+	public void setDateFromString(GregorianCalendar gc, String d) {
+		if (d != null) {
+			StringTokenizer tokenizer = new StringTokenizer(d, "-");
+			while (tokenizer.hasMoreTokens()) {
+				String toSet = tokenizer.nextToken();
+				gc.set(GregorianCalendar.YEAR, Integer.parseInt(toSet));
+				toSet = tokenizer.nextToken();
+				gc.set(GregorianCalendar.MONTH, Integer.parseInt(toSet)-1);
+				tokenizer.nextToken();
+				gc.set(GregorianCalendar.DAY_OF_MONTH, Integer.parseInt(toSet));
+			}	
+		}
+		
 	}
 	
 	
