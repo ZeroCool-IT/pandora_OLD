@@ -5,6 +5,8 @@
  */
 package it.zerocool.pandora.model;
 
+import it.zerocool.pandora.utility.ParsingUtilities;
+
 import java.util.GregorianCalendar;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
@@ -35,8 +37,6 @@ public class Event {
 	public Event(int id) {
 		this.id = id;
 		this.tags = new LinkedList<String>();
-		date = new GregorianCalendar();
-		until = new GregorianCalendar();
 	}
 
 
@@ -86,6 +86,17 @@ public class Event {
 	public void setDate(GregorianCalendar date) {
 		this.date = date;
 	}
+	
+	/**
+	 * Set the event's date and hour parsing infos from Strings
+	 * @param date it's the date to set (YYYY-mm-DD format)
+	 * @param hour it's the hour to set (HH:mm 24H format)
+	 */
+	public void setDate(String date, String hour) {
+		GregorianCalendar g = ParsingUtilities.dateFromString(date, hour);
+		if (g != null)
+			setDate(g);
+	}
 
 
 	/**
@@ -101,6 +112,17 @@ public class Event {
 	 */
 	public void setUntil(GregorianCalendar until) {
 		this.until = until;
+	}
+	
+	/**
+	 * Set the event's end date and hour parsing infos from Strings
+	 * @param date it's the date to set (YYYY-mm-DD format)
+	 * @param hour it's the hour to set (HH:mm 24H format)
+	 */
+	public void setUntil(String date, String hour) {
+		GregorianCalendar g = ParsingUtilities.dateFromString(date, hour);
+		if (g != null)
+			setDate(g);
 	}
 
 
@@ -195,23 +217,5 @@ public class Event {
 	 */
 	public void setContact(ContactCard contact) {
 		this.contact = contact;
-	}
-	
-	//REVIEW
-	public void setDateFromString(GregorianCalendar gc, String d) {
-		if (d != null) {
-			StringTokenizer tokenizer = new StringTokenizer(d, "-");
-			while (tokenizer.hasMoreTokens()) {
-				String toSet = tokenizer.nextToken();
-				gc.set(GregorianCalendar.YEAR, Integer.parseInt(toSet));
-				toSet = tokenizer.nextToken();
-				gc.set(GregorianCalendar.MONTH, Integer.parseInt(toSet)-1);
-				tokenizer.nextToken();
-				gc.set(GregorianCalendar.DAY_OF_MONTH, Integer.parseInt(toSet));
-			}	
-		}
-		
-	}
-	
-	
+	}	
 }
