@@ -1,6 +1,6 @@
 /**
  * Project: Pandora
- * File it.zerocool.pandora.utility/ParsingUtility.java
+ * File it.zerocool.pandora.utility/ParsingUtilities.java
  * @author Marco Battisti
  */
 package it.zerocool.pandora.utility;
