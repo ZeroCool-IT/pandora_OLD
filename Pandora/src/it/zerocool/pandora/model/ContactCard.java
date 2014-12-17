@@ -12,32 +12,15 @@ package it.zerocool.pandora.model;
  */
 public class ContactCard {
 	
-	protected int id;
 	protected String address;
-	protected TelephoneNumber telephone;
+	protected String  telephone;
 	protected String email;
 	protected String url;
 
 	/**
 	 * Public constructor
 	 */
-	public ContactCard(int id) {
-		this.id = id;
-	}
-
-	/**
-	 * @return the id
-	 */
-	public int getId() {
-		return id;
-	}
-
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(int id) {
-		this.id = id;
-	}
+	public ContactCard() {}
 
 	/**
 	 * @return the address
@@ -56,14 +39,14 @@ public class ContactCard {
 	/**
 	 * @return the telephone
 	 */
-	public TelephoneNumber getTelephone() {
+	public String getTelephone() {
 		return telephone;
 	}
 
 	/**
 	 * @param telephone the telephone to set
 	 */
-	public void setTelephone(TelephoneNumber telephone) {
+	public void setTelephone(String telephone) {
 		this.telephone = telephone;
 	}
 

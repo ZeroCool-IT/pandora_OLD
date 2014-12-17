@@ -166,6 +166,7 @@ public class Event {
 			StringTokenizer tokenizer = new StringTokenizer(csv, ",");
 			while (tokenizer.hasMoreTokens()) {
 				String toAdd = tokenizer.nextToken();
+				toAdd = toAdd.trim();
 				getTags().add(toAdd);
 			}
 		}

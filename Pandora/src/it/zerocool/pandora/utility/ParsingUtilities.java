@@ -5,8 +5,18 @@
  */
 package it.zerocool.pandora.utility;
 
+import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.StringTokenizer;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.location.Location;
+import android.util.Log;
+import it.zerocool.pandora.model.*;
+import it.zerocool.pandora.utility.Constraints;
 
 /**
  * Utility class for data parsing
@@ -56,6 +66,68 @@ public class ParsingUtilities {
 			toSet = tokenizer.nextToken();
 			g.set(GregorianCalendar.MINUTE, Integer.parseInt(toSet));
 		}
+	}
+	
+	public static ArrayList<Place> parsePlaceFromJSON(String json) {
+		ArrayList<Place> result = new ArrayList<Place>();
+		try {
+			JSONObject reader = new JSONObject(json);
+			JSONArray data = reader.getJSONArray("LUOGHI");
+			if (data != null) {
+				for (int i = 0; i < data.length(); i++) {
+					JSONObject toBuild = data.getJSONObject(i);
+					int type = Integer.parseInt(toBuild.getString("TYPE"));
+					int id = Integer.parseInt((toBuild.getString("LUOGO_ID")));
+					Place p = null;
+					switch (type) {
+					case Constraints.TYPE_TOSEE:
+						p = new ToSee(id);
+						break;
+					case Constraints.TYPE_EAT:
+						p = new Eat(id);
+						break;
+					case Constraints.TYPE_SLEEP:
+						p = new Sleep(id);
+						break;
+					case Constraints.TYPE_SERVICE:
+						p = new Service(id);
+						break;
+					case Constraints.TYPE_SHOP:
+						p = new Shop(id);
+						break;
+					default:
+						break;
+					}
+					p.setName(toBuild.getString("NAME"));
+					p.setDescription("DESCRIPTION");
+					p.setImage(toBuild.getString("IMAGE"));
+					p.setTagsFromCSV(toBuild.getString("TAGS"));
+					ContactCard c = new ContactCard();
+					c.setAddress(toBuild.getString("ADDRESS"));
+					c.setEmail(toBuild.getString("EMAIL"));
+					c.setUrl(toBuild.getString("URL"));
+					c.setTelephone(toBuild.getString("TELEPHONENUMBER"));
+					p.setContact(c);
+					Location l = new Location("");
+					String latitude = toBuild.getString("LATITUDE");
+					String longitude = toBuild.getString("LONGITUDE");
+					l.setLatitude(Location.convert(latitude));
+					l.setLongitude(Location.convert(longitude));
+					p.setLocation(l);
+					//TO DO TimeCard
+					result.add(p);
+					
+					
+					
+				}
+			}
+			return result;
+			
+		} catch (JSONException e) {
+			Log.e("JSON Exception", e.getMessage());
+		}
+		return result;
+		
 	}
 
 	/**
