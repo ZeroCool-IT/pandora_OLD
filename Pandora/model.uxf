@@ -132,7 +132,7 @@ Service
     <panel_attributes>bg=orange
 ContactCard
 --
--id: int
+-telephone: String
 -address: String
 -email: String
 -url: String
@@ -276,36 +276,5 @@ m1=0..1
 m2=1..1
 &lt; has a </panel_attributes>
     <additional_attributes>10.0;240.0;10.0;10.0;220.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>225</x>
-      <y>342</y>
-      <w>126</w>
-      <h>72</h>
-    </coordinates>
-    <panel_attributes>bg=blue
-TelephoneNumber
---
--intPrefix: String
--prefix: String
--number: String
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>342</x>
-      <y>360</y>
-      <w>171</w>
-      <h>45</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=0..1
-m2=1..1
-belong to &gt;</panel_attributes>
-    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
   </element>
 </diagram>

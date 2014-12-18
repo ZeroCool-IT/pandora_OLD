@@ -5,6 +5,8 @@
  */
 package it.zerocool.pandora.model;
 
+import it.zerocool.pandora.utility.Constraints;
+
 /**
  * Class representing places' contact info
  * @author Marco
@@ -13,7 +15,7 @@ package it.zerocool.pandora.model;
 public class ContactCard {
 	
 	protected String address;
-	protected String  telephone;
+	protected String telephone;
 	protected String email;
 	protected String url;
 
@@ -33,7 +35,11 @@ public class ContactCard {
 	 * @param address the address to set
 	 */
 	public void setAddress(String address) {
-		this.address = address;
+		if (!address.equals(Constraints.EMPTY_VALUE)) {
+			this.address = address;
+		}
+		else
+			this.address = null;
 	}
 
 	/**
@@ -47,7 +53,11 @@ public class ContactCard {
 	 * @param telephone the telephone to set
 	 */
 	public void setTelephone(String telephone) {
-		this.telephone = telephone;
+		if (!telephone.equals(Constraints.EMPTY_VALUE)) {
+			this.telephone = telephone;
+		}
+		else
+			this.telephone = null;
 	}
 
 	/**
@@ -61,7 +71,11 @@ public class ContactCard {
 	 * @param email the email to set
 	 */
 	public void setEmail(String email) {
-		this.email = email;
+		if (!email.equals(Constraints.EMPTY_VALUE)) {
+			this.email = email;
+		}
+		else
+			this.email = null;
 	}
 
 	/**
@@ -75,7 +89,11 @@ public class ContactCard {
 	 * @param url the url to set
 	 */
 	public void setUrl(String url) {
-		this.url = url;
+		if (!url.equals(Constraints.EMPTY_VALUE)) {
+			this.url = url;
+		}
+		else
+			this.url = null;
 	}
 
 }

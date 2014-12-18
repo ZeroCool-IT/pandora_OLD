@@ -6,9 +6,11 @@
 package it.zerocool.pandora.model;
 
 import java.util.LinkedList;
+import java.util.Locale;
 import java.util.StringTokenizer;
 
 import android.location.Location;
+import it.zerocool.pandora.utility.*;
 
 /**
  * Class representing city's places
@@ -86,7 +88,11 @@ public class Place {
 	 * @param image the image of the place to set
 	 */
 	public void setImage(String image) {
-		this.image = image;
+		if (!image.equals(Constraints.EMPTY_VALUE)) {
+			this.image = image;
+		}
+		else
+			this.image = null;
 	}
 
 
@@ -104,7 +110,11 @@ public class Place {
 	 * @param fsqrLink the 4square link to set
 	 */
 	public void setFsqrLink(String fsqrLink) {
-		this.fsqrLink = fsqrLink;
+		if (!fsqrLink.equals(Constraints.EMPTY_VALUE)) {
+			this.fsqrLink = fsqrLink;
+		}
+		else
+			this.fsqrLink = null;
 	}
 
 
@@ -130,12 +140,15 @@ public class Place {
 	 * @param t is the string in CSV format
 	 */
 	public void setTagsFromCSV(String csv) {
-		if (csv != null) {
+		if (csv != null && !csv.equals(Constraints.EMPTY_VALUE)) {
 			StringTokenizer tokenizer = new StringTokenizer(csv, ",");
 			while (tokenizer.hasMoreTokens()) {
 				String toAdd = tokenizer.nextToken();
 				toAdd = toAdd.trim();
-				getTags().add(toAdd);
+				toAdd = toAdd.substring(0, 1).toUpperCase(Locale.ITALY) + toAdd.substring(1);
+				if (!getTags().contains(toAdd)) {
+					getTags().add(toAdd);
+				}
 			}
 		}
 	}
@@ -155,7 +168,11 @@ public class Place {
 	 * @param description the description of the place to set
 	 */
 	public void setDescription(String description) {
-		this.description = description;
+		if (!description.equals(Constraints.EMPTY_VALUE)) {
+			this.description = description;
+		}
+		else
+			this.description = null;
 	}
 
 
@@ -194,16 +211,34 @@ public class Place {
 		this.timeCard = openingTime;
 	}
 
-
-
+	/**
+	 * @return the location of the place
+	 */
 	public Location getLocation() {
 		return location;
 	}
 
 
-
+	/**
+	 * @param location is the location of the place to set
+	 */
 	public void setLocation(Location location) {
 		this.location = location;
 	}
+	
+	/**
+	 * Redefine equals
+	 */
+	public boolean equals(Object o) {
+		if (o != null) {
+			Place p = (Place)o;
+			if (p.getId() == this.getId()) 
+				return true;
+			else
+				return false;
+		}
+		return false;
+	}
+	
 
 }

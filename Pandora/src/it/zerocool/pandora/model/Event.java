@@ -5,10 +5,12 @@
  */
 package it.zerocool.pandora.model;
 
+import it.zerocool.pandora.utility.Constraints;
 import it.zerocool.pandora.utility.ParsingUtilities;
 
 import java.util.GregorianCalendar;
 import java.util.LinkedList;
+import java.util.Locale;
 import java.util.StringTokenizer;
 
 import android.location.Location;
@@ -68,7 +70,11 @@ public class Event {
 	 * @param name the name of the event to set
 	 */
 	public void setName(String name) {
-		this.name = name;
+		if (!name.equals(Constraints.EMPTY_VALUE)) {
+			this.name = name;
+		}
+		else
+			this.name = null;
 	}
 
 
@@ -138,7 +144,11 @@ public class Event {
 	 * @param image the image  of the event to set
 	 */
 	public void setImage(String image) {
-		this.image = image;
+		if (!image.equals(Constraints.EMPTY_VALUE)) {
+			this.image = image;
+		}
+		else
+			this.image = null;
 	}
 
 
@@ -167,7 +177,10 @@ public class Event {
 			while (tokenizer.hasMoreTokens()) {
 				String toAdd = tokenizer.nextToken();
 				toAdd = toAdd.trim();
-				getTags().add(toAdd);
+				toAdd = toAdd.substring(0, 1).toUpperCase(Locale.ITALY) + toAdd.substring(1);
+				if (!getTags().contains(toAdd)) {
+					getTags().add(toAdd);
+				}
 			}
 		}
 	}
@@ -185,7 +198,11 @@ public class Event {
 	 * @param description the description of the event to set
 	 */
 	public void setDescription(String description) {
-		this.description = description;
+		if (!description.equals(Constraints.EMPTY_VALUE)) {
+			this.description = description;
+		}
+		else
+			this.description = null;
 	}
 
 
