@@ -25,54 +25,44 @@ import it.zerocool.pandora.utility.Constraints;
  */
 public class ParsingUtilities {
 	
-	/**
-	 * Parse a String representing date (YYYY-mm-DD format) filling a
-	 * GregorianCalendar object
-	 * 
-	 * @param s is the string to parse
-	 * @param g is the GregorianCalendar object to fill
-	 */
-	public static GregorianCalendar dateFromString(String d, String h) {
-		if (d != null && h != null) {
-			GregorianCalendar g = new GregorianCalendar();
-			parseDate(d, g);
-			parseHour(h, g);
-			return g;
-		}
-		else
-			return null;
-		
-	}
 	
-	public static void parseDate(String d, GregorianCalendar g) {
-		if (d != null) {
+	public static GregorianCalendar parseDate(String d) {
+		if (d != null && !d.equals(Constraints.EMPTY_VALUE)) {
+			GregorianCalendar result = new GregorianCalendar();
 			StringTokenizer tokenizer = new StringTokenizer(d, "-");
 			while (tokenizer.hasMoreTokens()) {
 				String toSet = tokenizer.nextToken();
-				g.set(GregorianCalendar.YEAR, Integer.parseInt(toSet));
+				result.set(GregorianCalendar.YEAR, Integer.parseInt(toSet));
 				toSet = tokenizer.nextToken();
-				g.set(GregorianCalendar.MONTH, Integer.parseInt(toSet)-1);
+				result.set(GregorianCalendar.MONTH, Integer.parseInt(toSet)-1);
 				tokenizer.nextToken();
-				g.set(GregorianCalendar.DAY_OF_MONTH, Integer.parseInt(toSet));
+				result.set(GregorianCalendar.DAY_OF_MONTH, Integer.parseInt(toSet));
 			}
+			return result;
 		}
+		return null;
 	}
 	
-	public static void parseHour(String h, GregorianCalendar g) {
-		StringTokenizer tokenizer = new StringTokenizer(h, ":");
-		while (tokenizer.hasMoreTokens()) {
-			String toSet = tokenizer.nextToken();
-			g.set(GregorianCalendar.HOUR_OF_DAY, Integer.parseInt(toSet));
-			toSet = tokenizer.nextToken();
-			g.set(GregorianCalendar.MINUTE, Integer.parseInt(toSet));
+	public static GregorianCalendar parseHour(String h) {
+		if (h != null && !h.equals(Constraints.EMPTY_VALUE)) {
+			GregorianCalendar result = new GregorianCalendar();
+			StringTokenizer tokenizer = new StringTokenizer(h, ":");
+			while (tokenizer.hasMoreTokens()) {
+				String toSet = tokenizer.nextToken();
+				result.set(GregorianCalendar.HOUR_OF_DAY, Integer.parseInt(toSet));
+				toSet = tokenizer.nextToken();
+				result.set(GregorianCalendar.MINUTE, Integer.parseInt(toSet));
+			}
+			return result;
 		}
+		return null;
 	}
 	
 	public static ArrayList<Place> parsePlaceFromJSON(String json) {
 		ArrayList<Place> result = new ArrayList<Place>();
 		try {
 			JSONObject reader = new JSONObject(json);
-			JSONArray data = reader.getJSONArray("LUOGHI");
+			JSONArray data = reader.getJSONArray("Luoghi");
 			if (data != null) {
 				for (int i = 0; i < data.length(); i++) {
 					JSONObject toBuild = data.getJSONObject(i);
@@ -114,20 +104,79 @@ public class ParsingUtilities {
 					l.setLatitude(Location.convert(latitude));
 					l.setLongitude(Location.convert(longitude));
 					p.setLocation(l);
-					//TO DO TimeCard
+					//TODO TimeCard
 					result.add(p);
 					
 					
 					
 				}
 			}
-			return result;
 			
 		} catch (JSONException e) {
 			Log.e("JSON Exception", e.getMessage());
 		}
 		return result;
 		
+	}
+	
+	public static ArrayList<Event> parseEventFromJSON(String json) {
+		ArrayList<Event> result = new ArrayList<Event>();
+		try {
+			JSONObject reader = new JSONObject(json);
+			JSONArray data = reader.getJSONArray("Eventi");
+			if (data != null) {
+				for (int i = 0; i < data.length(); i++) {
+					JSONObject toBuild = data.getJSONObject(i);
+					int id = Integer.parseInt(toBuild.getString("EVENTO_ID"));
+					Event e = new Event(id);
+					e.setName(toBuild.getString("NAME"));
+					e.setDescription(toBuild.getString("DESCRIPTION"));
+					ContactCard c = new ContactCard();
+					c.setAddress(toBuild.getString("ADDRESS"));
+					c.setEmail(toBuild.getString("EMAIL"));
+					c.setTelephone(toBuild.getString("TELEPHONENUMBER"));
+					c.setUrl(toBuild.getString("URL"));
+					e.setContact(c);
+					e.setImage(toBuild.getString("IMAGE"));
+					e.setTagsFromCSV(toBuild.getString("TAGS"));
+					e.setStartDate(toBuild.getString("FROMDATE"));
+					e.setEndDate(toBuild.getString("UNTILDATE"));
+					e.setStartHour(toBuild.getString("FROMHOUR"));
+					e.setEndHour(toBuild.getString("UNTILHOUR"));
+					//TODO Location
+					result.add(e);
+				}
+			}
+			
+		} catch (JSONException e) {
+			Log.e("JSON Exception", e.getMessage());
+		}
+		return result;
+	}
+	
+	public static ArrayList<News> parseNewsFromJSON(String json) {
+		ArrayList<News> result = new ArrayList<News>();
+		try {
+			JSONObject reader = new JSONObject(json);
+			//TODO Check name of the JSON fields
+			JSONArray data = reader.getJSONArray("Notizie");
+			if (data != null) {
+				for (int i = 0; i < data.length(); i++) {
+					JSONObject toBuild = data.getJSONObject(i);
+					int id = Integer.parseInt(toBuild.getString("NEWS_ID"));
+					News n = new News(id);
+					n.setTitle(toBuild.getString("NAME"));
+					n.setBody(toBuild.getString("DESCRIPTION"));
+					n.setDate(toBuild.getString("DATE"));
+					n.setImage(toBuild.getString("IMAGE"));
+					n.setUrl(toBuild.getString("URL"));
+					result.add(n);
+				}
+			}
+		} catch (JSONException e) {
+			Log.e("JSON Exception", e.getMessage());
+		}
+		return result;
 	}
 
 	/**

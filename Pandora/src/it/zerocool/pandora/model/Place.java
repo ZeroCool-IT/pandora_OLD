@@ -227,10 +227,10 @@ public class Place {
 	}
 	
 	/**
-	 * Redefine equals
+	 * Redefine equals: 2 places are equals if their ids are equals
 	 */
 	public boolean equals(Object o) {
-		if (o != null) {
+		if (o != null && o.getClass() == Place.class) {
 			Place p = (Place)o;
 			if (p.getId() == this.getId()) 
 				return true;

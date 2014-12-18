@@ -90,7 +90,8 @@ public class ContactCard {
 	 */
 	public void setUrl(String url) {
 		if (!url.equals(Constraints.EMPTY_VALUE)) {
-			this.url = url;
+			String toSet = url.replace("\\/", "/");
+			this.url = toSet;
 		}
 		else
 			this.url = null;

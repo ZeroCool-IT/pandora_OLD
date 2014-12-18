@@ -1,6 +1,6 @@
 /**
  * Project: Pandora
- * File: it.zerocool.pandora.model/Event
+ * File: it.zerocool.pandora.model/Event.java
  * @author Marco Battisti
  */
 package it.zerocool.pandora.model;
@@ -23,8 +23,10 @@ public class Event {
 	
 	protected int id;
 	protected String name;
-	protected GregorianCalendar date;
-	protected GregorianCalendar until;
+	protected GregorianCalendar startDate;
+	protected GregorianCalendar endDate;
+	protected GregorianCalendar startHour;
+	protected GregorianCalendar endHour;
 	protected String image;
 	protected LinkedList<String> tags;
 	protected String description;
@@ -79,56 +81,102 @@ public class Event {
 
 
 	/**
-	 * @return the date of the event
+	 * @return the start date of the event
 	 */
-	public GregorianCalendar getDate() {
-		return date;
+	public GregorianCalendar getStartDate() {
+		return startDate;
 	}
 
 
 	/**
-	 * @param date the date of the event to set
+	 * @param date the start date of the event to set
 	 */
-	public void setDate(GregorianCalendar date) {
-		this.date = date;
-	}
-	
-	/**
-	 * Set the event's date and hour parsing infos from Strings
-	 * @param date it's the date to set (YYYY-mm-DD format)
-	 * @param hour it's the hour to set (HH:mm 24H format)
-	 */
-	public void setDate(String date, String hour) {
-		GregorianCalendar g = ParsingUtilities.dateFromString(date, hour);
-		if (g != null)
-			setDate(g);
-	}
-
-
-	/**
-	 * @return the until
-	 */
-	public GregorianCalendar getUntil() {
-		return until;
-	}
-
-
-	/**
-	 * @param until the until to set
-	 */
-	public void setUntil(GregorianCalendar until) {
-		this.until = until;
+	public void setStartDate(GregorianCalendar date) {
+		this.startDate = date;
 	}
 	
 	/**
-	 * Set the event's end date and hour parsing infos from Strings
-	 * @param date it's the date to set (YYYY-mm-DD format)
-	 * @param hour it's the hour to set (HH:mm 24H format)
+	 * Set the event's start date parsing infos from String
+	 * @param date it's the start date to set (YYYY-mm-DD format)
 	 */
-	public void setUntil(String date, String hour) {
-		GregorianCalendar g = ParsingUtilities.dateFromString(date, hour);
-		if (g != null)
-			setDate(g);
+	public void setStartDate(String date) {
+		GregorianCalendar g = ParsingUtilities.parseDate(date);
+		setStartDate(g);
+			
+	}
+
+
+	/**
+	 * @return the end date of the event
+	 */
+	public GregorianCalendar getgetEndDate() {
+		return endDate;
+	}
+
+
+	/**
+	 * @param endDate is the end date of the event to set
+	 */
+	public void setEndDate(GregorianCalendar endDate) {
+		this.endDate = endDate;
+	}
+	
+	/**
+	 * Set the event's end date parsing infos from String
+	 * @param endDate it's the end date to set (YYYY-mm-DD format)
+	 */
+	public void setEndDate(String endDate) {
+		GregorianCalendar g = ParsingUtilities.parseDate(endDate);
+		setEndDate(g);
+		
+	}
+	
+	/**
+	 * @return the start hour of the event
+	 */
+	public GregorianCalendar getStartHour() {
+		return startHour;
+	}
+	
+	/**
+	 * 
+	 * @param startHour the start hour of the event to set
+	 */
+	public void setStartHour(GregorianCalendar startHour) {
+		this.startHour = startHour;
+	}
+	
+	/**
+	 * Set the event's start hour parsing infos from String
+	 * @param startHour it's the end date to set (HH:mm 24H format)
+	 */
+	public void setStartHour(String startHour) {
+		GregorianCalendar g = ParsingUtilities.parseHour(startHour);
+		setStartHour(g);
+	}
+	
+	/**
+	 * @return the start hour of the event
+	 */
+	public GregorianCalendar getEndHour() {
+		return endHour;
+	}
+	
+	/**
+	 * 
+	 * @param endHour the end hour of the event to set
+	 */
+	public void setEndHour(GregorianCalendar endHour) {
+		this.endHour = endHour;
+	}
+	
+	/**
+	 * Set the event's end hour parsing infos from String
+	 * @param endHour it's the end date to set (HH:mm 24H format)
+	 */
+	public void setEndHour(String endHour) {
+		GregorianCalendar g = ParsingUtilities.parseHour(endHour);
+		setEndHour(g);
 	}
 
 
@@ -235,5 +283,19 @@ public class Event {
 	 */
 	public void setContact(ContactCard contact) {
 		this.contact = contact;
-	}	
+	}
+	
+	/**
+	 * Redefine equals: 2 events are equals if their ids are equals
+	 */
+	public boolean equals(Object o) {
+		if (o != null && o.getClass() == Event.class) {
+			Event e = (Event)o;
+			if (e.getId() == this.getId()) 
+				return true;
+			else
+				return false;
+		}
+		return false;
+	}
 }

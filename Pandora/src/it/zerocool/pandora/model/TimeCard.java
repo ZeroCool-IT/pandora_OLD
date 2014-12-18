@@ -15,7 +15,6 @@ import java.util.LinkedList;
  */
 public class TimeCard {
 	
-	protected int id;
 	protected LinkedList<GregorianCalendar> days;
 	
 	
@@ -23,25 +22,8 @@ public class TimeCard {
 	/**
 	 * Public constructor
 	 */
-	public TimeCard(int id) {
-		this.id = id;
+	public TimeCard() {
 		days = new LinkedList<GregorianCalendar>();
-	}
-
-
-	/**
-	 * @return the id
-	 */
-	public int getId() {
-		return id;
-	}
-
-
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(int id) {
-		this.id = id;
 	}
 
 
