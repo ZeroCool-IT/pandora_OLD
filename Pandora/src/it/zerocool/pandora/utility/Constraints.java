@@ -22,6 +22,30 @@ public class Constraints {
 	public static final int TYPE_SERVICE = 4;
 	public static final int TYPE_SHOP = 5;
 	
+	//Week Days
+	public static final int MONDAY = 0;
+	public static final int TUESDAY = 1;
+	public static final int WEDNESDAY = 2;
+	public static final int THURSDAY = 3;
+	public static final int FRIDAY = 4;
+	public static final int SATURDAY = 5;
+	public static final int SUNDAY = 6;
+	
+	//Holydays
+	public static final int JAN_01 = 0;
+	public static final int JAN_06 = 1;
+	public static final int EASTER = 2;
+	public static final int EASTERS_MONDAY = 3;
+	public static final int APRIL_25 = 4;
+	public static final int MAY_01 = 5;
+	public static final int JUNE_02 = 6;
+	public static final int AUG_15 = 7;
+	public static final int NOV_01 = 8;
+	public static final int DEC_08 = 9;
+	public static final int DEC_25 = 10;
+	public static final int DEC_26 = 11;
+	
+	
 	
 	/**
 	 * 

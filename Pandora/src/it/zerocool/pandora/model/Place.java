@@ -26,7 +26,7 @@ public class Place {
 	protected LinkedList<String> tags;
 	protected String description;
 	protected ContactCard contact;
-	protected TimeCard timeCard;
+	protected LinkedList<TimeCard> timeCard;
 	protected Location location;
 	
 	
@@ -35,7 +35,8 @@ public class Place {
 	 */
 	public Place(int id) {
 		this.id = id;
-		tags =  new LinkedList<String>();
+		this.tags =  new LinkedList<String>();
+		this.timeCard = new LinkedList<TimeCard>();
 	}
 
 
@@ -198,7 +199,7 @@ public class Place {
 	/**
 	 * @return the Time Card representing opening time of the place
 	 */
-	public TimeCard getTimeCard() {
+	public LinkedList<TimeCard> getTimeCard() {
 		return timeCard;
 	}
 
@@ -207,8 +208,8 @@ public class Place {
 	/**
 	 * @param openingTime the Time Card to set
 	 */
-	public void setTimeCard(TimeCard openingTime) {
-		this.timeCard = openingTime;
+	public void setTimeCard(LinkedList<TimeCard> timeCard) {
+		this.timeCard = timeCard;
 	}
 
 	/**
