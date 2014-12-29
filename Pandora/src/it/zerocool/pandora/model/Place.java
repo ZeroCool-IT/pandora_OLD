@@ -26,7 +26,7 @@ public class Place {
 	protected LinkedList<String> tags;
 	protected String description;
 	protected ContactCard contact;
-	protected LinkedList<TimeCard> timeCard;
+	protected TimeCard timeCard;
 	protected Location location;
 	
 	
@@ -36,7 +36,6 @@ public class Place {
 	public Place(int id) {
 		this.id = id;
 		this.tags =  new LinkedList<String>();
-		this.timeCard = new LinkedList<TimeCard>();
 	}
 
 
@@ -138,7 +137,7 @@ public class Place {
 	
 	/**
 	 * Add the tags to tags' list from a string in CSV format
-	 * @param t is the string in CSV format
+	 * @param csv is the string in CSV format
 	 */
 	public void setTagsFromCSV(String csv) {
 		if (csv != null && !csv.equals(Constraints.EMPTY_VALUE)) {
@@ -197,20 +196,20 @@ public class Place {
 
 
 	/**
-	 * @return the Time Card representing opening time of the place
+	 * @return the timeCard
 	 */
-	public LinkedList<TimeCard> getTimeCard() {
+	public TimeCard getTimeCard() {
 		return timeCard;
 	}
 
 
-
 	/**
-	 * @param openingTime the Time Card to set
+	 * @param timeCard the timeCard to set
 	 */
-	public void setTimeCard(LinkedList<TimeCard> timeCard) {
+	public void setTimeCard(TimeCard timeCard) {
 		this.timeCard = timeCard;
 	}
+
 
 	/**
 	 * @return the location of the place

@@ -25,7 +25,11 @@ import it.zerocool.pandora.utility.Constraints;
  */
 public class ParsingUtilities {
 	
-	
+	/**
+	 * Build a GregorianCalendar date from a String (YYYY-mm-DD format)
+	 * @param d is the date to build
+	 * @return the date in GregorianCalendar format
+	 */
 	public static GregorianCalendar parseDate(String d) {
 		if (d != null && !d.equals(Constraints.EMPTY_VALUE)) {
 			GregorianCalendar result = new GregorianCalendar();
@@ -43,6 +47,11 @@ public class ParsingUtilities {
 		return null;
 	}
 	
+	/**
+	 * Build a GregorianCalendar hour from a String (HH:mm format)
+	 * @param h is the hour to build
+	 * @return the hour in GregorianCalendar format
+	 */
 	public static GregorianCalendar parseHour(String h) {
 		if (h != null && !h.equals(Constraints.EMPTY_VALUE)) {
 			GregorianCalendar result = new GregorianCalendar();
@@ -58,6 +67,12 @@ public class ParsingUtilities {
 		return null;
 	}
 	
+	
+	/**
+	 * Build an ArrayList containing Place objects from a string in JSON format
+	 * @param json is the JSON string
+	 * @return the list of Place objects
+	 */
 	public static ArrayList<Place> parsePlaceFromJSON(String json) {
 		ArrayList<Place> result = new ArrayList<Place>();
 		try {
@@ -104,7 +119,14 @@ public class ParsingUtilities {
 					l.setLatitude(Location.convert(latitude));
 					l.setLongitude(Location.convert(longitude));
 					p.setLocation(l);
-					//TODO TimeCard
+					TimeCard t = new TimeCard();
+					t.setAmOpening(toBuild.getString("AMOPENING"));
+					t.setAmClosing(toBuild.getString("AMCLOSING"));
+					t.setPmOpening(toBuild.getString("PMOPENING"));
+					t.setPmClosing(toBuild.getString("PMCLOSING"));
+					t.setClosingDaysFromCSV(toBuild.getString("CLOSINGDAYS"));
+					t.setNotes(toBuild.getString("NOTES"));
+					p.setTimeCard(t);
 					result.add(p);
 					
 					
@@ -119,6 +141,12 @@ public class ParsingUtilities {
 		
 	}
 	
+
+	/**
+	 * Build an ArrayList containing Event objects from a string in JSON format
+	 * @param json is the JSON string
+	 * @return the list of Event objects
+	 */
 	public static ArrayList<Event> parseEventFromJSON(String json) {
 		ArrayList<Event> result = new ArrayList<Event>();
 		try {
@@ -154,12 +182,17 @@ public class ParsingUtilities {
 		return result;
 	}
 	
+
+	/**
+	 * Build an ArrayList containing News objects from a string in JSON format
+	 * @param json is the JSON string
+	 * @return the list of News objects
+	 */
 	public static ArrayList<News> parseNewsFromJSON(String json) {
 		ArrayList<News> result = new ArrayList<News>();
 		try {
 			JSONObject reader = new JSONObject(json);
-			//TODO Check name of the JSON fields
-			JSONArray data = reader.getJSONArray("Notizie");
+			JSONArray data = reader.getJSONArray("News");
 			if (data != null) {
 				for (int i = 0; i < data.length(); i++) {
 					JSONObject toBuild = data.getJSONObject(i);
